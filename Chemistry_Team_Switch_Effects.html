@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spurs Analysis: The Richard Jefferson Bounce Back</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; line-height: 1.6; color: #24292e; max-width: 800px; margin: 0 auto; padding: 2rem; }
+        h1, h2 { border-bottom: 1px solid #eaecef; padding-bottom: 0.3em; }
+        code { background-color: rgba(27,31,35,0.05); padding: 0.2em 0.4em; border-radius: 3px; font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace; }
+        .formula { background: #f6f8fa; padding: 1rem; border-radius: 6px; overflow-x: auto; margin: 1rem 0; border: 1px solid #d1d5da; }
+        table { border-collapse: collapse; width: 100%; margin: 1rem 0; }
+        table, th, td { border: 1px solid #dfe2e5; }
+        th, td { padding: 6px 13px; text-align: left; }
+        tr:nth-child(even) { background-color: #f6f8fa; }
+        .insight { background-color: #fffbdd; border-left: 0.25em solid #d9d02f; padding: 1rem; margin: 1.5rem 0; }
+    </style>
+</head>
+<body>
+
+    <h1>Analyzing the "New Team" Slump: Can Richard Jefferson Bounce Back?</h1>
+    
+    <p>This week, I am analyzing whether the San Antonio Spurs should anticipate a bounce-back year from Richard Jefferson. To investigate, I used regression analysis to determine if players who switch teams struggle during their first year and whether they typically regain their prior performance levels in subsequent seasons.</p>
+
+    <p>The model predicts the percentage of points and <strong>True Shot Attempts (TSA)</strong> a player is responsible for, using variables such as age, team performance, tenure, and "new team" indicators.</p>
+
+    <h2>The Model in Practice: Richard Jefferson (2009/10)</h2>
+    
+    <div class="formula">
+        <strong>1. Establish Baseline:</strong><br>
+        <code>PtsRatio2009 = Pts / (TmPts / TmMP * MP) = 1607 / (8142 / 2939) * (19780 / 5) = 0.266</code><br><br>
+        
+        <strong>2. Relative Team Performance:</strong><br>
+        <code>TmRatio/TmRatioLY = 101.4 / 96.3 / (99.3 / 100.4) = 1.065</code><br><br>
+        
+        <strong>3. The Prediction:</strong><br>
+        <code>Expected PtsRatio2010 = PtsRatio2009 * (1.7885 - 0.0083*Age + 0.001*Tenure - 1.196*NewTeam - 0.568*TmRatioLY - 0.196*(TmRatio*NewTeam) + 0.00069*Year*NewTeam)</code><br>
+        <strong>= 0.245</strong><br><br>
+        
+        <strong>4. Final Output:</strong><br>
+        <code>Expected PPG = 16.0</code>
