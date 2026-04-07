@@ -5,37 +5,92 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spurs Analysis: The Richard Jefferson Bounce Back</title>
     <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; line-height: 1.6; color: #24292e; max-width: 800px; margin: 0 auto; padding: 2rem; }
-        h1, h2 { border-bottom: 1px solid #eaecef; padding-bottom: 0.3em; }
-        code { background-color: rgba(27,31,35,0.05); padding: 0.2em 0.4em; border-radius: 3px; font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace; }
-        .formula { background: #f6f8fa; padding: 1rem; border-radius: 6px; overflow-x: auto; margin: 1rem 0; border: 1px solid #d1d5da; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; line-height: 1.6; color: #24292e; max-width: 850px; margin: 0 auto; padding: 2rem; }
+        h1, h2, h3 { border-bottom: 1px solid #eaecef; padding-bottom: 0.3em; }
+        code { background-color: rgba(27,31,35,0.05); padding: 0.2em 0.4em; border-radius: 3px; font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace; font-size: 85%; }
+        pre { background-color: #f6f8fa; padding: 16px; border-radius: 6px; overflow: auto; font-size: 85%; line-height: 1.45; border: 1px solid #d1d5da; }
+        .formula-box { background: #e7f3ff; padding: 1.5rem; border-radius: 6px; margin: 1.5rem 0; border-left: 5px solid #007bff; }
+        .insight-box { background-color: #fffbdd; border-left: 5px solid #d9d02f; padding: 1rem; margin: 1.5rem 0; }
         table { border-collapse: collapse; width: 100%; margin: 1rem 0; }
-        table, th, td { border: 1px solid #dfe2e5; }
-        th, td { padding: 6px 13px; text-align: left; }
+        th, td { border: 1px solid #dfe2e5; padding: 8px 12px; text-align: left; }
         tr:nth-child(even) { background-color: #f6f8fa; }
-        .insight { background-color: #fffbdd; border-left: 0.25em solid #d9d02f; padding: 1rem; margin: 1.5rem 0; }
     </style>
 </head>
 <body>
 
-    <h1>Analyzing the "New Team" Slump: Can Richard Jefferson Bounce Back?</h1>
+    <h1>Analyzing the "New Team" Slump: Can Richard Jefferson Bounce Back? [cite: 1]</h1>
     
-    <p>This week, I am analyzing whether the San Antonio Spurs should anticipate a bounce-back year from Richard Jefferson. To investigate, I used regression analysis to determine if players who switch teams struggle during their first year and whether they typically regain their prior performance levels in subsequent seasons.</p>
+    <p>This week, I am posting an article analyzing whether or not the Spurs should anticipate a bounce-back year from Richard Jefferson[cite: 1]. To test whether players who switch teams struggle in their first year and if they regain their prior level of performance later, I used regression analysis to predict the percentage of points and true shot attempts (TSA) a player is responsible for[cite: 1].</p>
 
-    <p>The model predicts the percentage of points and <strong>True Shot Attempts (TSA)</strong> a player is responsible for, using variables such as age, team performance, tenure, and "new team" indicators.</p>
+    <p>The model incorporates several key variables[cite: 2]:</p>
+    <ul>
+        <li>Player age [cite: 2]</li>
+        <li>Team performance [cite: 2]</li>
+        <li>Tenure with the team [cite: 2]</li>
+        <li>An indicator for players new to their respective teams [cite: 2]</li>
+        <li>Interaction terms between these variables [cite: 2]</li>
+    </ul>
 
-    <h2>The Model in Practice: Richard Jefferson (2009/10)</h2>
+    <h2>Model 1: Predicting Points Ratio</h2>
+    <p>Below is the regression output for the Points Ratio model[cite: 2]:</p>
     
-    <div class="formula">
-        <strong>1. Establish Baseline:</strong><br>
-        <code>PtsRatio2009 = Pts / (TmPts / TmMP * MP) = 1607 / (8142 / 2939) * (19780 / 5) = 0.266</code><br><br>
-        
-        <strong>2. Relative Team Performance:</strong><br>
-        <code>TmRatio/TmRatioLY = 101.4 / 96.3 / (99.3 / 100.4) = 1.065</code><br><br>
-        
-        <strong>3. The Prediction:</strong><br>
-        <code>Expected PtsRatio2010 = PtsRatio2009 * (1.7885 - 0.0083*Age + 0.001*Tenure - 1.196*NewTeam - 0.568*TmRatioLY - 0.196*(TmRatio*NewTeam) + 0.00069*Year*NewTeam)</code><br>
-        <strong>= 0.245</strong><br><br>
-        
-        <strong>4. Final Output:</strong><br>
-        <code>Expected PPG = 16.0</code>
+    <pre>
+lm(formula = PtsRatio ~ Age + Tenure + New + TmNew + TmRatio + TmNew + YrNew, weights = PtsRatioLY*MP)
+
+Coefficients:
+                Estimate    Std. Error  t value   Pr(>|t|)    
+(Intercept)      1.7885826  0.0409844   43.641    < 2e-16 ***
+Age             -0.0083029  0.0004037  -20.566    < 2e-16 ***
+Tenure           0.0010507  0.0006109    1.720    0.085466 .  
+New Team Ind    -1.1966029  0.4064804   -2.944    0.003247 ** Ratio/LYRatio   -0.5683585  0.0388222  -14.640    < 2e-16 ***
+New*Ratio       -0.1961221  0.0635046   -3.088    0.002017 ** New*Yr           0.0006899  0.0002034    3.391    0.000698 ***
+    </pre>
+
+    <div class="formula-box">
+        <h3>Case Study: Richard Jefferson (2009/10) [cite: 3]</h3>
+        <p>Using Jefferson as an example, we can calculate his expected output[cite: 3]:</p>
+        <code>PtsRatio2009 = 1607 / 8142 / 2939 * (19780 / 5) = 0.266</code> [cite: 3]<br>
+        <code>TmRatio/TmRatioLY = 101.4 / 96.3 / (99.3 / 100.4) = 1.065</code> [cite: 3]<br>
+        <p><strong>Expected PtsRatio2010:</strong></p>
+        <code>0.266 * (1.7885 - 0.0083*29 + 0 - 1.1966 - 0.568*1.065 - 0.196*1.065 + 0.00069*2010) = 0.245</code> [cite: 3]
+        <p><strong>Converting to expected PPG:</strong></p>
+        <code>0.245 * 8312 / (19780 / 5) * 2520 / 81 = 16.0 PPG</code> [cite: 3]
+    </div>
+
+    <h3>Scoring and Team Quality [cite: 3]</h3>
+    <p>As players age, their scoring "increase" slows down until they max out in their late 20s[cite: 3]. From that point, they decrease their scoring load at an accelerating pace[cite: 4]. We also observe that players generally score less on better teams[cite: 5]. This occurs because players become less valuable scoring options when playing alongside superior teammates[cite: 6]. With Manu Ginobili, Tony Parker, and Tim Duncan on the court, this significantly explains why Jefferson’s scoring diminished to 12.3 PPG[cite: 7].</p>
+
+    <h2>The "New Team" Effect [cite: 7]</h2>
+    <p>Interestingly, players do tend to score less during their first year with a new team[cite: 7]. However, this factor is less significant than in earlier NBA eras[cite: 8]. This shift is likely due to an increased focus on the offseason (compared to the past when players often held offseason jobs) and improved player evaluation[cite: 8]. Once the first year is accounted for, experience with a team provides a modest benefit[cite: 9].</p>
+
+    <div class="insight-box">
+        <p>Players joining elite teams experience more significant reductions in productivity[cite: 9]. This likely stems from two factors[cite: 10]:</p>
+        <ol>
+            <li>Players are more willing to accept non-optimal roles on contenders[cite: 10].</li>
+            <li>Poor teams are more likely to adapt their entire system to accommodate new acquisitions[cite: 11].</li>
+        </ol>
+    </div>
+
+    <h2>Model 2: Predicting True Shot Attempts (TSA) Ratio [cite: 11]</h2>
+    <p>This model projects the percentage of true shot attempts a player is responsible for[cite: 11]:</p>
+
+    <pre>
+lm(formula = TSARatio ~ Age + Tenure + New + TmNew + TmRatio + TmNew + YrNew, weights = TSARatioLY*MP)
+
+Coefficients:
+                Estimate    Std. Error  t value   Pr(>|t|)    
+(Intercept)      1.6962742  0.0407451   41.631    < 2e-16 ***
+Age             -0.0061361  0.0004014  -15.289    < 2e-16 ***
+Tenure          -0.0031393  0.0006073   -5.169    2.39e-07 ***
+New Team Ind    -1.2261848  0.4041072   -3.034    0.002415 ** Ratio/LYRatio   -0.5297718  0.0385955  -13.726    < 2e-16 ***
+New*Ratio       -0.1441363  0.0631338   -2.283    0.022444 * New*Yr           0.0006813  0.0002022    3.369    0.000758 ***
+    </pre>
+
+    <h3>Efficiency vs. Usage [cite: 12]</h3>
+    <p>Efficiency changes much less with age than usage does[cite: 12]. Additionally, when a player moves to a better team, their scoring volume decreases faster than their TSA[cite: 13]. While individual players often become more efficient on better teams, this improvement usually fails to match the overall difference in team efficiencies[cite: 14]. Furthermore, efficiency decreases significantly during a player's first year with a new team[cite: 15].</p>
+
+    <h2>Looking Forward: The Bounce Back [cite: 15]</h2>
+    <p>I found that both usage and efficiency tend to increase the year after a player significantly under-performs expectations while changing teams[cite: 15]. This is likely due to the time required for players to adjust to a new environment[cite: 16]. While some under-performance can be attributed to bad luck or a "terrible season," the law of averages suggests these players would tend to improve regardless[cite: 17, 18].</p>
+
+</body>
+</html>
