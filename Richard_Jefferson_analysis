@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spurs Analysis: Richard Jefferson's 2011 Outlook</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; line-height: 1.6; color: #24292e; max-width: 900px; margin: 0 auto; padding: 2rem; }
+        h1, h2, h3 { border-bottom: 1px solid #eaecef; padding-bottom: 0.3em; margin-top: 1.5em; }
+        p { margin-bottom: 1em; }
+        .stats-highlight { background: #f6f8fa; padding: 1.5rem; border-radius: 6px; border: 1px solid #d1d5da; margin: 1.5rem 0; }
+        table { border-collapse: collapse; width: 100%; margin: 1.5rem 0; font-size: 0.9em; }
+        th { background-color: #f6f8fa; font-weight: 600; }
+        th, td { border: 1px solid #dfe2e5; padding: 8px 12px; text-align: left; }
+        tr:nth-child(even) { background-color: #fafbfc; }
+        .case-study { border-left: 4px solid #005cc5; padding-left: 1rem; margin: 1.5rem 0; font-style: italic; }
+        .outlook-box { background-color: #e1f5fe; border: 1px solid #01579b; padding: 1rem; border-radius: 6px; }
+    </style>
+</head>
+<body>
+
+    <h1>Should We Expect a Bounce-Back Year from Richard Jefferson?</h1>
+    
+    <p>The Spurs acquired Richard Jefferson before the 2009-10 season in hopes of supplementing Tim Duncan, Manu Ginobili, and Tony Parker[cite: 3]. By paying him like an All-Star, the expectation was that he would absorb a significant portion of the scoring load[cite: 4]. After averaging nearly 20 points per game the previous year, expectations were high for Jefferson to become one of the most potent fourth options in the NBA[cite: 5, 6].</p>
+
+    <p>However, Jefferson averaged just over 12 points in his first season with San Antonio[cite: 8]. As we look toward 2011, there is noticeable optimism that a second year in the system will yield significant improvement[cite: 10].</p>
+
+    <h2>The Statistical Reality of the Drop</h2>
+    <p>There were several indicators that a decrease in scoring was inevitable given the change in environment[cite: 14]. The Spurs were a superior team to the Milwaukee Bucks, leading to a reduction in Jefferson's minutes (from 36 to 31 MPG) and fewer shot attempts as he shared the floor with better alternatives[cite: 15, 16, 17].</p>
+    
+    <div class="stats-highlight">
+        <strong>Projected vs. Actual Production:</strong>
+        <ul>
+            <li><strong>Initial Expectation:</strong> Accounting for age and minutes, a player with Jefferson’s 2009 production would be expected to average <strong>16.4 PPG</strong> in 2010[cite: 18, 19].</li>
+            <li><strong>The "New Team" Adjustment:</strong> Players switching to quality teams typically see an additional drop; for Jefferson, this adjusted the expectation to <strong>16 PPG</strong>[cite: 20, 21].</li>
+        </ul>
+    </div>
+
+    <h2>Historical Context: Role Reductions and Recoveries</h2>
+    <p>The following table tracks players who saw significant role reductions during their first year with a new team[cite: 26]. It compares points per 36 minutes the year before, during, and after the switch[cite: 27].</p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Player</th>
+                <th>Year</th>
+                <th>Team</th>
+                <th>Age</th>
+                <th>LY Pts/36</th>
+                <th>Current Pts/36</th>
+                <th>Next Yr Pts/36</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td><strong>Average</strong></td><td>-</td><td>-</td><td>-</td><td><strong>19.1</strong></td><td><strong>15.7</strong></td><td><strong>16.4</strong></td></tr>
+            <tr><td>Kiki Vandeweghe</td><td>1984/85</td><td>POR</td><td>26</td><td>30.2</td><td>23.3</td><td>25.3</td></tr>
+            <tr><td>Adrian Dantley</td><td>1986/87</td><td>DET</td><td>30</td><td>29.7</td><td>22.9</td><td>23.2</td></tr>
+            <tr><td>World Free</td><td>1980/81</td><td>GSW</td><td>27</td><td>28.6</td><td>23.8</td><td>23.0</td></tr>
+            <tr><td>Moses Malone</td><td>1982/83</td><td>PHI</td><td>27</td><td>26.7</td><td>23.5</td><td>22.2</td></tr>
+            <tr><td>Jeff Malone</td><td>1990/91</td><td>UTA</td><td>29</td><td>25.5</td><td>18.7</td><td>20.2</td></tr>
+            <tr><td>Ray Allen</td><td>2007/08</td><td>BOS</td><td>32</td><td>23.6</td><td>17.5</td><td>18.0</td></tr>
+            <tr><td>Charles Barkley</td><td>1996/97</td><td>HOU</td><td>33</td><td>22.6</td><td>18.2</td><td>16.6</td></tr>
+            <tr><td>Stephon Marbury</td><td>2001/02</td><td>PHO</td><td>24</td><td>22.5</td><td>18.9</td><td>20.1</td></tr>
+            <tr><td>Glen Rice</td><td>1995/96</td><td>CHA</td><td>28</td><td>21.9</td><td>19.6</td><td>22.6</td></tr>
+        </tbody>
+    </table>
+
+    
+    <h3>Key Case Studies</h3>
+    <div class="case-study">
+        <strong>Ray Allen (2007-08):</strong> Allen knowingly accepted a reduced role alongside Garnett and Pierce[cite: 34, 35]. Because his role was fundamentally redefined, it was no surprise that his scoring did not "bounce back" the following year[cite: 37].
+    </div>
+    <div class="case-study">
+        <strong>Jason Terry (2004-05):</strong> Terry represents the ideal "bounce-back" scenario. After struggling to adjust in year one (12.4 PPG), he improved to 17 PPG in his second season with Dallas[cite: 38, 39, 40].
+    </div>
+    <div class="case-study">
+        <strong>Rashard Lewis (2007-08):</strong> Lewis showed a more typical trajectory. While his raw scoring didn't jump in year two, his efficiency (TSA/48) increased significantly as he acclimated to the Magic’s system[cite: 43, 45].
+    </div>
+
+    <h2>2011 Outlook: Reasons for Optimism</h2>
+    <p>While Jefferson’s Offensive Rating remained steady from 2009 to 2010, his diminished role <em>should</em> have resulted in an efficiency improvement of about five points per 100 possessions[cite: 47]. As he moves into 2011, there are early signs that he is rediscovering his aggressive edge[cite: 51].</p>
+
+    <div class="outlook-box">
+        <h3>Areas for Improvement:</h3>
+        <ul>
+            <li><strong>Aggression:</strong> In early 2011 play, Jefferson is averaging 6.6 free throws per 36 minutes, a figure much closer to his peak years[cite: 53, 54].</li>
+            <li><strong>3-Point Usage:</strong> Increasing his 3-point frequency (which was 50% higher in 2009) would benefit the Spurs’ spacing[cite: 55, 56].</li>
+            <li><strong>Off-Screen Sets:</strong> Jefferson was only utilized on 67 "Off-Screen" possessions last year, compared to approximately 250 in prior efficient years[cite: 57, 58].</li>
+        </ul>
+    </div>
+
+    <p>While a total Jason Terry-style return to form is unlikely, the data suggests a modest but meaningful increase in Richard Jefferson’s contributions for the 2011 season[cite: 59].</p>
+
+</body>
+</html>
