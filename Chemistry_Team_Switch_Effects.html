@@ -18,21 +18,21 @@
 </head>
 <body>
 
-    <h1>Analyzing the "New Team" Slump: Can Richard Jefferson Bounce Back? [cite: 1]</h1>
+    <h1>Analyzing the "New Team" Slump: Can Richard Jefferson Bounce Back?</h1>
     
-    <p>This week, I am posting an article analyzing whether or not the Spurs should anticipate a bounce-back year from Richard Jefferson[cite: 1]. To test whether players who switch teams struggle in their first year and if they regain their prior level of performance later, I used regression analysis to predict the percentage of points and true shot attempts (TSA) a player is responsible for[cite: 1].</p>
+    <p>This week, I am posting an article analyzing whether or not the Spurs should anticipate a bounce-back year from Richard Jefferson. To test whether players who switch teams struggle in their first year and if they regain their prior level of performance later, I used regression analysis to predict the percentage of points and true shot attempts (TSA) a player is responsible for.</p>
 
-    <p>The model incorporates several key variables[cite: 2]:</p>
+    <p>The model incorporates several key variables:</p>
     <ul>
-        <li>Player age [cite: 2]</li>
-        <li>Team performance [cite: 2]</li>
-        <li>Tenure with the team [cite: 2]</li>
-        <li>An indicator for players new to their respective teams [cite: 2]</li>
-        <li>Interaction terms between these variables [cite: 2]</li>
+        <li>Player age</li>
+        <li>Team performance</li>
+        <li>Tenure with the team</li>
+        <li>An indicator for players new to their respective teams</li>
+        <li>Interaction terms between these variables</li>
     </ul>
 
     <h2>Model 1: Predicting Points Ratio</h2>
-    <p>Below is the regression output for the Points Ratio model[cite: 2]:</p>
+    <p>Below is the regression output for the Points Ratio model:</p>
     
     <pre>
 lm(formula = PtsRatio ~ Age + Tenure + New + TmNew + TmRatio + TmNew + YrNew, weights = PtsRatioLY*MP)
@@ -49,32 +49,32 @@ New*Yr           0.0006899  0.0002034    3.391    0.000698 ***
     </pre>
 
     <div class="formula-box">
-        <h3>Case Study: Richard Jefferson (2009/10) [cite: 3]</h3>
-        <p>Using Jefferson as an example, we can calculate his expected output[cite: 3]:</p>
-        <code>PtsRatio2009 = 1607 / 8142 / 2939 * (19780 / 5) = 0.266</code> [cite: 3]<br>
-        <code>TmRatio/TmRatioLY = 101.4 / 96.3 / (99.3 / 100.4) = 1.065</code> [cite: 3]<br>
+        <h3>Case Study: Richard Jefferson (2009/10)</h3>
+        <p>Using Jefferson as an example, we can calculate his expected output:</p>
+        <code>PtsRatio2009 = 1607 / 8142 / 2939 * (19780 / 5) = 0.266</code><br>
+        <code>TmRatio/TmRatioLY = 101.4 / 96.3 / (99.3 / 100.4) = 1.065</code><br>
         <p><strong>Expected PtsRatio2010:</strong></p>
-        <code>0.266 * (1.7885 - 0.0083*29 + 0 - 1.1966 - 0.568*1.065 - 0.196*1.065 + 0.00069*2010) = 0.245</code> [cite: 3]
+        <code>0.266 * (1.7885 - 0.0083*29 + 0 - 1.1966 - 0.568*1.065 - 0.196*1.065 + 0.00069*2010) = 0.245</code>
         <p><strong>Converting to expected PPG:</strong></p>
-        <code>0.245 * 8312 / (19780 / 5) * 2520 / 81 = 16.0 PPG</code> [cite: 3]
+        <code>0.245 * 8312 / (19780 / 5) * 2520 / 81 = 16.0 PPG</code>
     </div>
 
-    <h3>Scoring and Team Quality [cite: 3]</h3>
-    <p>As players age, their scoring "increase" slows down until they max out in their late 20s[cite: 3]. From that point, they decrease their scoring load at an accelerating pace[cite: 4]. We also observe that players generally score less on better teams[cite: 5]. This occurs because players become less valuable scoring options when playing alongside superior teammates[cite: 6]. With Manu Ginobili, Tony Parker, and Tim Duncan on the court, this significantly explains why Jefferson’s scoring diminished to 12.3 PPG[cite: 7].</p>
+    <h3>Scoring and Team Quality</h3>
+    <p>As players age, their scoring "increase" slows down until they max out in their late 20s. From that point, they decrease their scoring load at an accelerating pace. We also observe that players generally score less on better teams. This occurs because players become less valuable scoring options when playing alongside superior teammates. With Manu Ginobili, Tony Parker, and Tim Duncan on the court, this significantly explains why Jefferson’s scoring diminished to 12.3 PPG.</p>
 
-    <h2>The "New Team" Effect [cite: 7]</h2>
-    <p>Interestingly, players do tend to score less during their first year with a new team[cite: 7]. However, this factor is less significant than in earlier NBA eras[cite: 8]. This shift is likely due to an increased focus on the offseason (compared to the past when players often held offseason jobs) and improved player evaluation[cite: 8]. Once the first year is accounted for, experience with a team provides a modest benefit[cite: 9].</p>
+    <h2>The "New Team" Effect</h2>
+    <p>Interestingly, players do tend to score less during their first year with a new team. However, this factor is less significant than in earlier NBA eras. This shift is likely due to an increased focus on the offseason (compared to the past when players often held offseason jobs) and improved player evaluation. Once the first year is accounted for, experience with a team provides a modest benefit.</p>
 
     <div class="insight-box">
-        <p>Players joining elite teams experience more significant reductions in productivity[cite: 9]. This likely stems from two factors[cite: 10]:</p>
+        <p>Players joining elite teams experience more significant reductions in productivity. This likely stems from two factors:</p>
         <ol>
-            <li>Players are more willing to accept non-optimal roles on contenders[cite: 10].</li>
-            <li>Poor teams are more likely to adapt their entire system to accommodate new acquisitions[cite: 11].</li>
+            <li>Players are more willing to accept non-optimal roles on contenders.</li>
+            <li>Poor teams are more likely to adapt their entire system to accommodate new acquisitions.</li>
         </ol>
     </div>
 
-    <h2>Model 2: Predicting True Shot Attempts (TSA) Ratio [cite: 11]</h2>
-    <p>This model projects the percentage of true shot attempts a player is responsible for[cite: 11]:</p>
+    <h2>Model 2: Predicting True Shot Attempts (TSA) Ratio</h2>
+    <p>This model projects the percentage of true shot attempts a player is responsible for:</p>
 
     <pre>
 lm(formula = TSARatio ~ Age + Tenure + New + TmNew + TmRatio + TmNew + YrNew, weights = TSARatioLY*MP)
@@ -86,15 +86,15 @@ Age             -0.0061361  0.0004014  -15.289    < 2e-16 ***
 Tenure          -0.0031393  0.0006073   -5.169    2.39e-07 ***
 New Team Ind    -1.2261848  0.4041072   -3.034    0.002415 ** 
 Ratio/LYRatio   -0.5297718  0.0385955  -13.726    < 2e-16 ***
-New*Ratio       -0.1441363  0.0631338   -2.283    0.022444 * 
+New*Ratio       -0.1441363  0.0631338   -2.283    0.022444 *
 New*Yr           0.0006813  0.0002022    3.369    0.000758 ***
     </pre>
 
-    <h3>Efficiency vs. Usage [cite: 12]</h3>
-    <p>Efficiency changes much less with age than usage does[cite: 12]. Additionally, when a player moves to a better team, their scoring volume decreases faster than their TSA[cite: 13]. While individual players often become more efficient on better teams, this improvement usually fails to match the overall difference in team efficiencies[cite: 14]. Furthermore, efficiency decreases significantly during a player's first year with a new team[cite: 15].</p>
+    <h3>Efficiency vs. Usage</h3>
+    <p>Efficiency changes much less with age than usage does. Additionally, when a player moves to a better team, their scoring volume decreases faster than their TSA. While individual players often become more efficient on better teams, this improvement usually fails to match the overall difference in team efficiencies. Furthermore, efficiency decreases significantly during a player's first year with a new team.</p>
 
-    <h2>Looking Forward: The Bounce Back [cite: 15]</h2>
-    <p>I found that both usage and efficiency tend to increase the year after a player significantly under-performs expectations while changing teams[cite: 15]. This is likely due to the time required for players to adjust to a new environment[cite: 16]. While some under-performance can be attributed to bad luck or a "terrible season," the law of averages suggests these players would tend to improve regardless[cite: 17, 18].</p>
+    <h2>Looking Forward: The Bounce Back</h2>
+    <p>I found that both usage and efficiency tend to increase the year after a player significantly under-performs expectations while changing teams. This is likely due to the time required for players to adjust to a new environment. While some under-performance can be attributed to bad luck or a "terrible season," the law of averages suggests these players would tend to improve regardless.</p>
 
 </body>
 </html>
