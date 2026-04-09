@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DASPM: Defensive Advanced Statistical Plus Minus</title>
+    <style>
+        body { font-family: sans-serif; line-height: 1.6; max-width: 900px; margin: auto; padding: 2rem; }
+        .model-box { background: #fdf2f2; border-left: 5px solid #e74c3c; padding: 15px; font-family: monospace; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { border: 1px solid #ddd; padding: 10px; text-align: left; }
+    </style>
+</head>
+<body>
+    <h1>Defensive Advanced Statistical Plus Minus (DASPM)</h1>
+    <p>Defense is notoriously difficult to measure. Blocks and steals account for less than 12 plays per game, leaving 98% of defensive possessions unmeasured by traditional box scores[cite: 7]. This model integrates height interactions and opponent PER to better capture "rep-based" value[cite: 7].</p>
+
+    <h2>The DASPM Formula</h2>
+    <div class="model-box">
+        DASPM = -5.37 + 0.42*OppPER + 0.33*DR + 1.71*STL – 0.38*TO + 0.07*(HT-60)*BLK + – 0.23*SF*BLK – 0.07*SF*PF + 0.46*OtherFoul + 1.26*Charges – 1.38*Goaltends
+    </div>
+
+    <h2>Evaluating "Non-Statistical" Defenders</h2>
+    <p>Many elite defenders have reputations that far exceed their box score stats. Advanced statistics help bridge this gap, though even these models sometimes struggle to reach the heights shown in adjusted plus-minus figures[cite: 7].</p>
+    <table>
+        <thead>
+            <tr><th>Player</th><th>Def SPM</th><th>Advanced DASPM</th><th>Def Adj PM</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>Bruce Bowen</td><td>-1.2</td><td>-0.8</td><td>2.8</td></tr>
+            <tr><td>Shane Battier</td><td>0.1</td><td>1.5</td><td>1.8</td></tr>
+            <tr><td>Tayshaun Prince</td><td>-0.9</td><td>0.0</td><td>3.3</td></tr>
+        </tbody>
+    </table>
+</body>
+</html>
