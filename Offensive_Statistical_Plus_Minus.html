@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AOSPM: Offensive Advanced Statistical Plus Minus</title>
+    <style>
+        body { font-family: sans-serif; line-height: 1.6; max-width: 900px; margin: auto; padding: 2rem; }
+        .formula { background: #f4f4f4; padding: 15px; border-left: 5px solid #2ecc71; font-family: monospace; }
+        .insight-box { background: #fff4e5; border: 1px solid #ffcc80; padding: 15px; border-radius: 5px; margin: 20px 0; }
+        h1, h2 { border-bottom: 2px solid #eee; }
+    </style>
+</head>
+<body>
+    <h1>Offensive Advanced Statistical Plus Minus (AOSPM)</h1>
+    <p>Adjusted plus-minus is a powerful, unbiased estimate of player value, yet it often suffers from high standard error[cite: 6]. This model uses advanced statistics—grouping shots and assists by type—to create a more reliable proxy for player impact[cite: 6].</p>
+
+    <h2>The Advanced Model Formula</h2>
+    <div class="formula">
+        AOSPM = -6.53 + 0.63*FT + 3.35*Uastd3P + 0.88*Uastd2J + 1.04*UastdClose + 1.97*Astd3P + 0.62*Astd2J + 0.82*AstdClose – 0.69*MissFG + 0.2*Jasts + 1.04*CloseAsts + 0.19*OR – 1.24*TO + 0.34*STL + 0.7*TSA(Ht-60)/100
+    </div>
+
+    <h2>Key Observations</h2>
+    <ul>
+        <li><strong>Free Throw Value:</strong> Getting to the line is so valuable that even missed free throws do not significantly decrease team scoring expectations[cite: 6].</li>
+        <li><strong>Assists:</strong> An assist on a close shot is significantly more valuable than one on a jumper, likely due to the massive increase in scoring expectation a layup pass provides[cite: 6].</li>
+        <li><strong>Unassisted Threes:</strong> Interestingly, the coefficient for an unassisted 3-pointer exceeds 3.0, reflecting the value of players who can create high-leverage "clutch" shots[cite: 6].</li>
+    </ul>
+
+    <div class="insight-box">
+        <strong>Case Study: Steve Nash</strong><br>
+        Nash is the quintessential "advanced stat" player. While standard box score metrics (SPM) estimated his offensive value at 3.9, the advanced model (AOSPM) attributes 11.4 points above average, capturing his elite shot creation and "close assist" frequency[cite: 6].
+    </div>
+</body>
+</html>
