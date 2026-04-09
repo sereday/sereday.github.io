@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NBA Analytics: Mean Expected Championships Added (MECA)</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; max-width: 900px; margin: 40px auto; padding: 0 20px; }
+        header { border-bottom: 2px solid #eee; margin-bottom: 30px; }
+        h1 { font-size: 2.2rem; color: #1a1a1a; margin-bottom: 10px; }
+        pre { background: #f4f4f4; padding: 15px; border-radius: 5px; overflow-x: auto; font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace; }
+        .formula-card { background: #eef6ff; border-left: 5px solid #2196f3; padding: 20px; margin: 25px 0; border-radius: 0 5px 5px 0; }
+        .insight-box { background: #fffde7; border-left: 5px solid #fbc02d; padding: 20px; margin: 25px 0; border-radius: 0 5px 5px 0; }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        th, td { text-align: left; padding: 12px; border-bottom: 1px solid #ddd; }
+    </style>
+</head>
+<body>
+    <article>
+        <header>
+            <h1>Expected Championships Added (ECA) & MECA</h1>
+        </header>
+
+        <section>
+            <p>Most advanced statistics approximate points and wins created or value above replacement. However, few account for the ultimate goal that teams prioritize: championships. While participating on a championship team doesn't automatically make a player the best, career value estimates are incomplete without analyzing championship impact.</p>
+
+            <div class="insight-box">
+                <strong>Core Thesis:</strong> Expected Championships Added (ECA) and Mean Expected Championships Added (MECA) bridge the gap between points added and the probability of winning a title.
+            </div>
+
+            <p>ECA is defined as the difference between the expected number of team wins (based on basketball’s Pythagorean expectation) and the expected team wins after removing the estimated effect of a player. Value for points and wins added is estimated using advanced statistical plus-minus (SPM).</p>
+
+            <div class="formula-card">
+                <strong>The Pythagorean Relationship:</strong> Points and wins are not linearly related. A player adding +1.0 to a margin of victory has a different impact based on the team's baseline strength:
+                <table>
+                    <thead>
+                        <tr><th>Average Score</th><th>Expected Wins</th><th>Wins Added</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>90-110</td><td>4.7</td><td>0.7</td></tr>
+                        <tr><td>95-105</td><td>16.2</td><td>1.9</td></tr>
+                        <tr><td>100-100</td><td>41.0</td><td>2.9</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section>
+            <h2>Methodology: The Beta Distribution</h2>
+            <p>To determine championship expectations across different eras and league sizes, I used a beta distribution (alpha and beta ≈ 5) to model the distribution of team winning percentages. This allows for a consistent probability of winning a title given a specific win total.</p>
+            
+            <p>The probability calculation factors in:</p>
+            <ul>
+                <li>Expected conference rank/seeding.</li>
+                <li>Home-court advantage.</li>
+                <li>Dynamic playoff matchups.</li>
+            </ul>
+        </section>
+    </article>
+</body>
+</html>
