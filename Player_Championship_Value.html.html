@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MECA: Mean Expected Championships Added</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; line-height: 1.6; color: #24292e; max-width: 900px; margin: 0 auto; padding: 2rem; }
+        h1, h2, h3 { border-bottom: 1px solid #eaecef; padding-bottom: 0.3em; margin-top: 1.5em; }
+        .stats-highlight { background: #f6f8fa; padding: 1.5rem; border-radius: 6px; border: 1px solid #d1d5da; margin: 1.5rem 0; }
+        table { border-collapse: collapse; width: 100%; margin: 1.5rem 0; font-size: 0.9em; }
+        th { background-color: #f6f8fa; font-weight: 600; }
+        th, td { border: 1px solid #dfe2e5; padding: 8px 12px; text-align: left; }
+        tr:nth-child(even) { background-color: #fafbfc; }
+        .formula { font-family: "SFMono-Regular", Consolas, monospace; background: #e7f3ff; padding: 1rem; border-radius: 6px; display: block; margin: 1rem 0; }
+    </style>
+</head>
+<body>
+    <h1>Expected Championships Added (ECA & MECA)</h1>
+    <p>While most advanced statistics approximate points and wins, few account for the ultimate goal of professional basketball: championships[cite: 5]. ECA and MECA were developed to bridge this gap, recognizing that the value of a point varies significantly based on a team's baseline strength[cite: 5].</p>
+
+    <h2>The Concept</h2>
+    <p>ECA is the difference between expected team wins based on Pythagorean expectation and the expected wins after removing a player's estimated impact[cite: 5]. MECA represents the average ECA a player would attain on a typical team in a typical season[cite: 5].</p>
+
+    <div class="stats-highlight">
+        <strong>The Non-Linearity of Wins:</strong>
+        <p>A player adding 1.0 point to a team's margin of victory has varying impacts on total wins depending on the team's average score[cite: 5]:</p>
+        <table>
+            <tr><th>Avg Score</th><th>Expected Wins</th><th>Wins Added</th></tr>
+            <tr><td>90-110</td><td>4.7</td><td>0.7</td></tr>
+            <tr><td>95-105</td><td>16.2</td><td>1.9</td></tr>
+            <tr><td>100-100</td><td>41.0</td><td>2.9</td></tr>
+        </table>
+    </div>
+
+    <h2>Comparative Analysis: LeBron James vs. Ray Allen</h2>
+    <p>MECA highlights the difference between long-term production and high-impact peaks[cite: 5]. While Ray Allen has historically accumulated more total wins added, LeBron James' peak impact translates to a significantly higher championship probability[cite: 5].</p>
+    <table>
+        <thead>
+            <tr><th>Year</th><th>Allen (MEWA)</th><th>LeBron (MEWA)</th><th>Allen (MECA)</th><th>LeBron (MECA)</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>2008/09</td><td>13.0</td><td>27.3</td><td>0.085</td><td>0.405</td></tr>
+            <tr><td>2009/10</td><td>9.9</td><td>25.9</td><td>0.045</td><td>0.365</td></tr>
+            <tr><td><strong>Total</strong></td><td><strong>163.4</strong></td><td><strong>146.5</strong></td><td><strong>1.042</strong></td><td><strong>1.830</strong></td></tr>
+        </tbody>
+    </table>
+</body>
+</html>
